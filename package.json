@@ -1,0 +1,26 @@
+{
+  "name": "escape99",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ESCAPE 99 — 99 rooms. one way out. A portrait, one-handed puzzle-action escape game that runs from a static folder.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "serve": "node tools/serve.mjs",
+    "test": "node tests/run.mjs",
+    "validate": "node tools/validate-levels.mjs",
+    "check": "node tools/validate-levels.mjs && node tests/run.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "game",
+    "puzzle",
+    "escape",
+    "mobile",
+    "canvas",
+    "pwa"
+  ]
+}
