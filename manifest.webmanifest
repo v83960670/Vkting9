@@ -1,0 +1,29 @@
+{
+  "name": "ESCAPE 99 — 99 Rooms. One Way Out.",
+  "short_name": "ESCAPE 99",
+  "description": "Find the key. Beat the traps. Escape 99 rooms. A fast one-thumb puzzle-action game.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#120c08",
+  "theme_color": "#1b1410",
+  "categories": ["games", "entertainment"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%231b1410'/%3E%3Crect x='24' y='24' width='464' height='464' rx='80' fill='none' stroke='%23ffd45e' stroke-width='10' opacity='0.5'/%3E%3Ctext x='256' y='330' font-family='system-ui,sans-serif' font-size='250' font-weight='800' fill='%23ffd45e' text-anchor='middle'%3E99%3C/text%3E%3Ctext x='256' y='420' font-family='system-ui,sans-serif' font-size='62' font-weight='700' fill='%232fb7a8' text-anchor='middle' letter-spacing='10'%3EESCAPE%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%231b1410'/%3E%3Ctext x='256' y='340' font-family='system-ui,sans-serif' font-size='300' font-weight='800' fill='%23ffd45e' text-anchor='middle'%3E9%3C/text%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no" />
+<title>ESCAPE 99 — 99 Rooms. One Way Out.</title>
+<meta name="description" content="ESCAPE 99 is a fast, one-thumb mobile puzzle-action game: find the key, beat the traps, escape 99 rooms." />
+<meta name="theme-color" content="#1b1410" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="ESCAPE 99" />
+<meta name="color-scheme" content="dark" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1410'/%3E%3Ctext x='32' y='45' font-family='system-ui,sans-serif' font-size='38' font-weight='800' fill='%23ffd45e' text-anchor='middle'%3E99%3C/text%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1410'/%3E%3Ctext x='32' y='45' font-family='system-ui,sans-serif' font-size='38' font-weight='800' fill='%23ffd45e' text-anchor='middle'%3E99%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- the game itself: fixed, full-screen, portrait -->
+  <canvas id="game" aria-label="ESCAPE 99 game canvas"></canvas>
+
+  <noscript><p style="color:#fff;padding:24px">ESCAPE 99 needs JavaScript to run.</p></noscript>
+
+  <div id="crash" hidden>
+    <strong>Something went wrong.</strong>
+    <pre></pre>
+  </div>
+
+  <!-- marketing / docs page, only visible when you scroll past the game -->
+  <div id="page">
+    <header class="hero">
+      <div class="hero__logo"><span>ESCAPE</span><b>99</b></div>
+      <p class="hero__tag">99 ROOMS. ONE WAY OUT.</p>
+      <p class="hero__sub">Find the key. Beat the traps. Escape. A fast, one-thumb puzzle-action game for phones.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#play">▶ PLAY THE WEB BUILD</a>
+        <a class="btn btn--ghost" href="https://github.com/v83960670/Vkting9">VIEW SOURCE</a>
+      </div>
+      <ul class="hero__facts">
+        <li>Portrait 9:16 · one thumb</li>
+        <li>60 FPS target · tiny download</li>
+        <li>10 handcrafted rooms + boss</li>
+        <li>Endless mode when you unlock it</li>
+      </ul>
+    </header>
+
+    <section class="sec">
+      <h2>WHAT IT IS</h2>
+      <p><strong>ESCAPE 99</strong> is a light dungeon escape game. Every room asks one question — <em>“I understand what I need to do… so how do I get there?”</em> — then hands you a key, a trap, and a door. Rooms take 20–60 seconds. Death restarts instantly.</p>
+      <div class="grid">
+        <article><h3>Find the key</h3><p>The exit stays locked until the golden key is in your hand.</p></article>
+        <article><h3>Read the danger</h3><p>Spikes warn before they strike. Fire walls hunt you. Blue = safe, red = death, gold = reward.</p></article>
+        <article><h3>Collect &amp; spend</h3><p>Coins buy simple upgrades: an extra heart, a stronger blade, a dash, a treasure magnet.</p></article>
+        <article><h3>Three stars</h3><p>Escape · take every coin · clear the room challenge. Never forced, always worth it.</p></article>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>ROOMS 1–10 (WORLD 1: FORGOTTEN TEMPLE)</h2>
+      <ol class="rooms">
+        <li><b>1</b> The First Key — learn to move</li>
+        <li><b>2</b> Watch Your Step — spikes on a 1.5s beat</li>
+        <li><b>3</b> The Moving Guard — first enemy + hidden gem</li>
+        <li><b>4</b> Two Switches — gates and the optional star timer</li>
+        <li><b>5</b> Run From Fire — a fire wall chases you out</li>
+        <li><b>6</b> Sword Room — discover the blade</li>
+        <li><b>7</b> Treasure or Escape? — risk vs reward</li>
+        <li><b>8</b> The Maze Moves — walls that rearrange</li>
+        <li><b>9</b> Everything Together — the exam</li>
+        <li><b>10</b> The Stone Guardian — boss + lava escape</li>
+      </ol>
+    </section>
+
+    <section class="sec">
+      <h2>INSTALL ON YOUR PHONE (ANDROID FIRST)</h2>
+      <ol class="steps">
+        <li>Open this page in Chrome on Android (or Safari on iOS).</li>
+        <li>Tap the menu → <strong>Add to Home screen</strong> / <strong>Install app</strong>.</li>
+        <li>Launch it from your home screen — it runs full-screen, offline, and instantly.</li>
+      </ol>
+      <p class="note">Ship-ready wrappers: the whole game is static files. Point a Capacitor / Cordova / WebView shell at <code>index.html</code>, add your rewarded-ad SDK in <code>src/core/ads.js</code>, and you have an APK / IPA. Portrait-locked, no external requests, no tracking SDKs.</p>
+    </section>
+
+    <section class="sec">
+      <h2>FEATURES IN THIS BUILD</h2>
+      <div class="grid">
+        <article><h3>Original art</h3><p>Arin and every prop are drawn procedurally at runtime — 15 animations, zero image assets, instant load.</p></article>
+        <article><h3>Synthesised audio</h3><p>Music and SFX are generated with WebAudio and rise in intensity when the fire starts.</p></article>
+        <article><h3>How it's built</h3><p>Vanilla ES modules, no framework, no build step, no dependencies. Data-driven rooms.</p></article>
+        <article><h3>Accessible</h3><p>Reduced screen shake, high-contrast hazards, vibration off, joystick or swipe, left-handed layout, English + हिन्दी.</p></article>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>SCREENSHOTS (GENERATED FROM THIS BUILD)</h2>
+      <div class="shots">
+        <figure><img src="docs/screens/room-01.jpg" alt="Room 1 — The First Key" loading="lazy" /><figcaption>1 · Find the key</figcaption></figure>
+        <figure><img src="docs/screens/room-02.jpg" alt="Room 2 — Watch Your Step" loading="lazy" /><figcaption>2 · Read the spike rhythm</figcaption></figure>
+        <figure><img src="docs/screens/room-04.jpg" alt="Room 4 — Two Switches" loading="lazy" /><figcaption>4 · Switches &amp; gates</figcaption></figure>
+        <figure><img src="docs/screens/room-08.jpg" alt="Room 8 — The Maze Moves" loading="lazy" /><figcaption>8 · Walls that move</figcaption></figure>
+        <figure><img src="docs/screens/room-10.jpg" alt="Room 10 — The Stone Guardian" loading="lazy" /><figcaption>10 · The Stone Guardian</figcaption></figure>
+        <figure><img src="docs/screens/results-0.jpg" alt="Results screen with two stars" loading="lazy" /><figcaption>Stars, bonuses, next room</figcaption></figure>
+      </div>
+      <p class="note">Regenerate with <code>node tools/smoke.mjs --tour --jpeg --out docs/screens</code>.</p>
+    </section>
+
+    <footer class="foot">
+      <p>ESCAPE 99 · 99 Rooms. One Way Out. · Prototype build</p>
+      <p class="note">No loot boxes. No wagering. Nothing essential is ever behind a purchase.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
